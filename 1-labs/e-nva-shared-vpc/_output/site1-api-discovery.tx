@@ -1,0 +1,62 @@
+
+ scanning all api endpoints ...
+
+204 - abusiveexperiencereport    v1         https://abusiveexperiencereport.googleapis.com/generate_204
+204 - acceleratedmobilepageurl   v1         https://acceleratedmobilepageurl.googleapis.com/generate_204
+204 - accessapproval             v1         https://accessapproval.googleapis.com/generate_204
+204 - accesscontextmanager       v1         https://accesscontextmanager.googleapis.com/generate_204
+204 - addressvalidation          v1         https://addressvalidation.googleapis.com/generate_204
+204 - adexchangebuyer2           v2beta1    https://adexchangebuyer2.googleapis.com/generate_204
+204 - adexperiencereport         v1         https://adexperiencereport.googleapis.com/generate_204
+204 - admin                      datatransfer_v1 https://admin.googleapis.com/generate_204
+204 - admin                      directory_v1 https://admin.googleapis.com/generate_204
+204 - admin                      reports_v1 https://admin.googleapis.com/generate_204
+204 - admob                      v1beta     https://admob.googleapis.com/generate_204
+204 - admob                      v1         https://admob.googleapis.com/generate_204
+204 - adsense                    v2         https://adsense.googleapis.com/generate_204
+^CTraceback (most recent call last):
+  File "/usr/local/bin/discoverz.py", line 22, in <module>
+    r = requests.get(url, timeout=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 468, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1097, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/ssl_.py", line 471, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/ssl_.py", line 515, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt
