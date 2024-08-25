@@ -317,7 +317,7 @@ module "hub_sa" {
 module "hub_eu_run_httpbin" {
   source     = "github.com/terraform-google-modules/cloud-foundation-fabric//modules/cloud-run-v2?ref=v33.0.0"
   project_id = var.project_id_hub
-  name       = "${local.hub_prefix}us-run-httpbin"
+  name       = "${local.hub_prefix}eu-run-httpbin"
   region     = local.hub_eu_region
   iam        = { "roles/run.invoker" = ["allUsers"] }
   containers = {
